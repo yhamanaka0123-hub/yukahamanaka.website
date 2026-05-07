@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuka Hamanaka | Growth Strategy · Product · Tech</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        accent: '#2d6a4f',
+                        dark: '#1a1a1a',
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"DM Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: #ffffff;
+            color: #1a1a1a;
+        }
+        h1, h2, h3, h4, .font-serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        .sidebar-link.active {
+            color: #2d6a4f;
+            font-weight: 700;
+            border-left: 2px solid #2d6a4f;
+            padding-left: 1rem;
+        }
+        .sidebar-link {
+            transition: all 0.3s ease;
+            border-left: 2px solid transparent;
+            padding-left: 0.75rem;
+        }
+        .sidebar-link:hover {
+            color: #2d6a4f;
+            padding-left: 1rem;
+        }
+        section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 4rem 0;
+        }
+        @media (max-width: 1024px) {
+            section {
+                min-height: auto;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Mobile Navigation Toggle -->
+    <div class="lg:hidden fixed top-4 right-4 z-50">
+        <button id="menu-toggle" class="bg-accent text-white p-2 rounded-md shadow-lg focus:outline-none">
+            <i class="fas fa-bars text-xl"></i>
+        </button>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <nav id="sidebar" class="fixed top-0 left-0 h-full w-64 bg-white border-r border-gray-100 px-8 py-12 flex-col justify-between hidden lg:flex z-40 transition-transform duration-300 transform lg:translate-x-0 -translate-x-full">
+        <div>
+            <div class="mb-12">
+                <h1 class="text-3xl font-bold tracking-tight text-dark leading-tight">Yuka<br>Hamanaka</h1>
+                <p class="text-sm text-gray-500 mt-2 font-sans tracking-wide uppercase">Growth Strategy · Product · Tech</p>
+            </div>
+            
+            <ul class="space-y-6 font-sans text-sm uppercase tracking-widest">
+                <li><a href="#about" class="sidebar-link active block">About</a></li>
+                <li><a href="#featured-work" class="sidebar-link block">Featured Work</a></li>
+                <li><a href="#experience" class="sidebar-link block">Experience</a></li>
+                <li><a href="#personal" class="sidebar-link block">Personal</a></li>
+                <li><a href="#contact" class="sidebar-link block">Contact</a></li>
+            </ul>
+        </div>
+        
+        <div class="space-y-4">
+            <div class="flex space-x-4 text-gray-400">
+                <a href="https://linkedin.com/in/yuka-hamanaka" target="_blank" class="hover:text-accent transition-colors"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:yuka.hamanaka@berkeley.edu" class="hover:text-accent transition-colors"><i class="far fa-envelope"></i></a>
+            </div>
+            <p class="text-[10px] text-gray-400 font-sans">© 2026 Yuka Hamanaka</p>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="lg:ml-64 px-6 md:px-12 lg:px-24 xl:px-32 max-w-7xl">
+        
+        <!-- About Section -->
+        <section id="about" class="pt-20 lg:pt-0">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-3/5 order-2 lg:order-1">
+                    <p class="text-accent font-sans font-bold uppercase tracking-widest mb-4 text-sm">UC Berkeley Haas MBA, Class of 2027</p>
+                    <h2 class="text-5xl md:text-7xl font-bold text-dark mb-8 leading-tight">Executing growth strategies for direct impact.</h2>
+                    <div class="space-y-6 text-lg text-gray-600 font-sans leading-relaxed">
+                        <p>
+                            Currently pursuing her MBA at Haas Business School, UC Berkeley, Yuka spent 7 years at PwC advising clients on growth and partnership strategies across technology, healthcare, and manufacturing.
+                        </p>
+                        <p>
+                            She is now looking to execute those strategies at a tech startup, for direct impact beyond making recommendations.
+                        </p>
+                        <p>
+                            Bilingual in English and Japanese, Yuka is seeking a summer internship in <strong>Growth / GTM Strategy</strong> at a US-based tech startup.
+                        </p>
+                    </div>
+                    <div class="mt-10 flex flex-wrap gap-4">
+                        <a href="#featured-work" class="bg-accent text-white px-8 py-3 rounded-sm font-sans text-sm uppercase tracking-widest hover:bg-opacity-90 transition-all">View Work</a>
+                        <a href="#contact" class="border border-dark text-dark px-8 py-3 rounded-sm font-sans text-sm uppercase tracking-widest hover:bg-dark hover:text-white transition-all">Get in Touch</a>
+                    </div>
+                </div>
+                <div class="lg:w-2/5 order-1 lg:order-2 flex justify-center">
+                    <div class="relative">
+                        <div class="absolute -top-4 -right-4 w-full h-full border-2 border-accent z-0"></div>
+                        <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663324346741/kFSDjzCAfGZgqEvt.webp" alt="Yuka Hamanaka" class="relative z-10 w-full max-w-md shadow-2xl transition-all duration-500">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Work Section -->
+        <section id="featured-work">
+            <div class="mb-16">
+                <p class="text-accent font-sans font-bold uppercase tracking-widest mb-2 text-sm">Featured Work</p>
+                <h2 class="text-4xl md:text-5xl font-bold text-dark">Haas Projects</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="group bg-white border border-gray-100 p-8 hover:border-accent transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <p class="text-xs text-gray-400 font-sans uppercase tracking-widest mb-4">Haas Applied AI Entrepreneurship Course</p>
+                        <h3 class="text-3xl font-bold text-dark mb-4">Reflect — Voice AI Journaling</h3>
+                        <p class="text-gray-600 mb-6 font-sans leading-relaxed">Built a voice-first journaling app that listens, reflects back, and surfaces patterns over time.</p>
+                        <ul class="space-y-3 text-sm text-gray-500 font-sans mb-8">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Conducted user interviews to validate core hypothesis and surface friction points</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Led competitive analysis to define differentiated positioning</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Designed agent behavior and iterated on prompts to shape how the AI reflects back to users</li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-50 text-gray-500 px-3 py-1 text-[10px] uppercase tracking-wider font-sans">Voice APIs</span>
+                        <span class="bg-gray-50 text-gray-500 px-3 py-1 text-[10px] uppercase tracking-wider font-sans">Claude</span>
+                        <span class="bg-gray-50 text-gray-500 px-3 py-1 text-[10px] uppercase tracking-wider font-sans">User Research</span>
+                        <span class="bg-gray-50 text-gray-500 px-3 py-1 text-[10px] uppercase tracking-wider font-sans">Prompt Engineering</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="group bg-white border border-gray-100 p-8 hover:border-accent transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <p class="text-xs text-gray-400 font-sans uppercase tracking-widest mb-4">Haas@Work · $13B Enterprise SaaS Client</p>
+                        <h3 class="text-3xl font-bold text-dark mb-4">AI Agent Command Center</h3>
+                        <p class="text-gray-600 mb-6 font-sans leading-relaxed">Driving AI use case discovery and prioritization for an enterprise AI agent platform.</p>
+                        <ul class="space-y-3 text-sm text-gray-500 font-sans mb-8">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Synthesized insights from user research into an impact-feasibility framework</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Informed POC prioritization across 8 industries</li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-50 text-gray-500 px-3 py-1 text-[10px] uppercase tracking-wider font-sans">AI Product</span>
+                        <span class="bg-gray-50 text-gray-500 px-3 py-1 text-[10px] uppercase tracking-wider font-sans">Use Case Discovery</span>
+                        <span class="bg-gray-50 text-gray-500 px-3 py-1 text-[10px] uppercase tracking-wider font-sans">Strategy</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience">
+            <div class="mb-16">
+                <p class="text-accent font-sans font-bold uppercase tracking-widest mb-2 text-sm">Career Journey</p>
+                <h2 class="text-4xl md:text-5xl font-bold text-dark">Experience</h2>
+            </div>
+            
+            <div class="space-y-16 max-w-4xl">
+                <!-- Haas -->
+                <div class="relative pl-8 border-l border-gray-100">
+                    <div class="absolute -left-[5px] top-0 w-[9px] h-[9px] bg-accent rounded-full"></div>
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-4">
+                        <h3 class="text-2xl font-bold text-dark">UC Berkeley Haas School of Business</h3>
+                        <p class="text-sm text-gray-400 font-sans">Aug 2025 – Present</p>
+                    </div>
+                    <p class="text-accent font-sans font-medium mb-6 uppercase tracking-wider text-sm">MBA Candidate, Class of 2027</p>
+                    <ul class="space-y-4 text-gray-600 font-sans leading-relaxed">
+                        <li class="flex items-start"><span class="text-accent mr-3 mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0"></span> AI Product Consultant at Haas@Work — use case discovery for $13B enterprise SaaS client</li>
+                        <li class="flex items-start"><span class="text-accent mr-3 mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0"></span> Co-built Reflect, a voice AI journaling app (Applied AI Entrepreneurship)</li>
+                        <li class="flex items-start"><span class="text-accent mr-3 mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0"></span> AI Certificate; Haas Tech Club, AI Club</li>
+                    </ul>
+                </div>
+
+                <!-- PwC -->
+                <div class="relative pl-8 border-l border-gray-100">
+                    <div class="absolute -left-[5px] top-0 w-[9px] h-[9px] bg-gray-200 rounded-full"></div>
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-4">
+                        <h3 class="text-2xl font-bold text-dark">PwC Advisory LLC, Tokyo</h3>
+                        <p class="text-sm text-gray-400 font-sans">2018 – 2025</p>
+                    </div>
+                    <p class="text-accent font-sans font-medium mb-2 uppercase tracking-wider text-sm">Senior Associate, Deals Strategy</p>
+                    <p class="text-xs text-gray-400 font-sans mb-6 italic">Promoted ahead of track | Clients: Fortune 500 · Energy, Tech, Healthcare, Manufacturing</p>
+                    <ul class="space-y-4 text-gray-600 font-sans leading-relaxed">
+                        <li class="flex items-start"><span class="text-accent mr-3 mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0"></span> Validated Edge AI market opportunity via 15+ customer interviews; supported $60M acquisition decision (projected 30%+ CAGR)</li>
+                        <li class="flex items-start"><span class="text-accent mr-3 mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0"></span> Reshaped GTM strategy for B2B SaaS via user interviews across 3 countries; uncovered 3 buying factors that redefined ICP</li>
+                        <li class="flex items-start"><span class="text-accent mr-3 mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0"></span> Led cross-cultural team of 10+ across Japan and India; drove $83M factory investment decision</li>
+                        <li class="flex items-start"><span class="text-accent mr-3 mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0"></span> Analyzed 5 personas, 3 pricing models, 5 distribution channels for B2C healthcare growth strategy</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personal Section -->
+        <section id="personal">
+            <div class="mb-16">
+                <p class="text-accent font-sans font-bold uppercase tracking-widest mb-2 text-sm">Beyond Work</p>
+                <h2 class="text-4xl md:text-5xl font-bold text-dark">Personal</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white border border-gray-100 p-8 hover:border-accent transition-all duration-300">
+                    <div class="w-12 h-12 rounded-full bg-gray-50 flex items-center justify-center text-accent mb-6">
+                        <i class="fas fa-child-reaching text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Aerial Yoga</h3>
+                    <p class="text-gray-600 font-sans text-sm leading-relaxed">Upside down is my happy place.</p>
+                </div>
+                <div class="bg-white border border-gray-100 p-8 hover:border-accent transition-all duration-300">
+                    <div class="w-12 h-12 rounded-full bg-gray-50 flex items-center justify-center text-accent mb-6">
+                        <i class="fas fa-earth-americas text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Potluck Host</h3>
+                    <p class="text-gray-600 font-sans text-sm leading-relaxed">International host — nothing brings people together like food from home.</p>
+                </div>
+                <div class="bg-white border border-gray-100 p-8 hover:border-accent transition-all duration-300">
+                    <div class="w-12 h-12 rounded-full bg-gray-50 flex items-center justify-center text-accent mb-6">
+                        <i class="fas fa-cat text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Pet Monitor</h3>
+                    <p class="text-gray-600 font-sans text-sm leading-relaxed">Obsessive pet camera monitor — real-time data, meaningful insights, zero ROI.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="mb-16">
+                <p class="text-accent font-sans font-bold uppercase tracking-widest mb-2 text-sm">Let's Connect</p>
+                <h2 class="text-4xl md:text-5xl font-bold text-dark">Contact</h2>
+            </div>
+            
+            <div class="max-w-2xl">
+                <p class="text-xl text-gray-600 font-sans leading-relaxed mb-12">
+                    Interested in connecting with founders, product leaders, and changemakers in tech. Drop me a message or send a connection invite.
+                </p>
+                
+                <div class="space-y-8">
+                    <div class="flex flex-wrap gap-8">
+                        <a href="mailto:yuka.hamanaka@berkeley.edu" class="group flex items-center text-dark hover:text-accent transition-all">
+                            <span class="w-10 h-10 border border-gray-200 rounded-full flex items-center justify-center mr-4 group-hover:border-accent transition-all">
+                                <i class="far fa-envelope text-sm"></i>
+                            </span>
+                            <span class="font-sans text-sm tracking-wide">yuka.hamanaka@berkeley.edu</span>
+                        </a>
+                        <a href="https://linkedin.com/in/yuka-hamanaka" target="_blank" class="group flex items-center text-dark hover:text-accent transition-all">
+                            <span class="w-10 h-10 border border-gray-200 rounded-full flex items-center justify-center mr-4 group-hover:border-accent transition-all">
+                                <i class="fab fa-linkedin-in text-sm"></i>
+                            </span>
+                            <span class="font-sans text-sm tracking-wide">/in/yuka-hamanaka</span>
+                        </a>
+                    </div>
+                    
+                    <div class="pt-8">
+                        <a href="#" class="inline-flex items-center bg-dark text-white px-10 py-4 rounded-sm font-sans text-xs uppercase tracking-[0.2em] hover:bg-accent transition-all duration-300 shadow-lg">
+                            <i class="fas fa-download mr-3"></i> Download Resume
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-12 border-t border-gray-100 lg:hidden">
+            <div class="flex justify-between items-center">
+                <h1 class="text-xl font-bold tracking-tight text-dark">Yuka Hamanaka</h1>
+                <div class="flex space-x-4 text-gray-400">
+                    <a href="https://linkedin.com/in/yuka-hamanaka" target="_blank" class="hover:text-accent transition-colors"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:yuka.hamanaka@berkeley.edu" class="hover:text-accent transition-colors"><i class="far fa-envelope"></i></a>
+                </div>
+            </div>
+            <p class="text-[10px] text-gray-400 font-sans mt-4 uppercase tracking-widest">© 2026 Yuka Hamanaka · Growth Strategy · Product · Tech</p>
+        </footer>
+
+    </main>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const sidebar = document.getElementById('sidebar');
+        
+        menuToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('hidden');
+            sidebar.classList.toggle('flex');
+            sidebar.classList.toggle('-translate-x-full');
+            sidebar.classList.toggle('translate-x-0');
+        });
+
+        // Close sidebar on link click (mobile)
+        const sidebarLinks = document.querySelectorAll('.sidebar-link');
+        sidebarLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth < 1024) {
+                    sidebar.classList.add('hidden');
+                    sidebar.classList.remove('flex');
+                    sidebar.classList.add('-translate-x-full');
+                    sidebar.classList.remove('translate-x-0');
+                }
+            });
+        });
+
+        // Scroll Spy
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.sidebar-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
